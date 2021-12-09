@@ -70,10 +70,7 @@ navigator.mediaDevices.getUserMedia(constraints)
             videostore.add(videoEntry);
         }
 
-        // let a=document.createElement('a');
-        // a.href=vediourl;
-        // a.download='stream.mp4';
-        // a.click();
+
     });
 
 })
