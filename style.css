@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.video-cont{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+}
+
+
+.actions-cont{
+
+    height: 9rem;
+    width: 4rem;
+    position: absolute;
+    top: calc((100vh - 9rem)/2);
+    right: 10vw;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: black; */
+
+}
+
+.actions-cont > *{
+    height: 4rem;
+    width: 100%;
+    border:3px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.record-btn{
+    height: 70%;
+    width: 70%;
+    border: 2px solid red;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.capture-btn{
+    height: 70%;
+    width: 70%;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.scale-record{
+    animation: scale-record 1s infinite;
+}
+
+.scale-capture{
+    animation: scale-capture 1s 1;
+}
+
+@keyframes scale-record{
+
+    0%{
+        transform: scale(0.8);
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+
+}
+
+@keyframes scale-capture{
+
+    0%{
+        transform: scale(0.8);
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+
+}
+
+/* filter */
+
+.filter-cont{
+    position: absolute;
+    top: calc((100vh - 9rem)/2);
+    left: 50px;
+    z-index: 3;
+
+}
+
+.filter{
+    border: 1px solid white;
+    height: 60px;
+    width:  100px;
+    background-image: url(sample1.jpeg);
+    background-size: 100% 100%;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    /* for color mixup */
+    background-blend-mode: color-burn;
+    
+}
+
+.filter2{
+    background-color: rgba(126, 71, 255, 0.247);
+}
+
+.filter3{
+    background-color: rgba(255, 237, 71, 0.24);
+}
+
+.filter4{
+    background-color: rgba(255, 99, 71, 0.226);
+}
+
+/* filter layer */
+
+.filter-layer{
+    height: 100vh;
+    width: 100vw;
+    border: 2px solid white;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+}
+
+
+/* timer */
+
+.timer{
+    position: absolute;
+    bottom: 30px;
+    color: red;
+    left: 50%;
+    font-size: 21px;
+    font-weight: bolder;
+    visibility: hidden;
+}
+
+/* gallery */
+
+.material-icons{
+    color: white;
+    font-size: 3rem;
+}
+
+.gallery{
+    position: absolute;
+    right: 121px;
+    bottom: 33px;
+    z-index: 3;
+}
+
+.gallery:hover{
+    cursor: pointer;
+}
