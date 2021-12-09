@@ -69,8 +69,6 @@ navigator.mediaDevices.getUserMedia(constraints)
             }
             videostore.add(videoEntry);
         }
-
-
     });
 
 })
